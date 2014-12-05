@@ -22,7 +22,7 @@ default['bigtop']['version']        = '0.8.0'
 # bigtop archive
 default['bigtop']['archive_base']   = 'http://archive.apache.org/dist/bigtop/'
 default['bigtop']['archive']        = "#{node[:bigtop][:archive_base]}bigtop-#{node[:bigtop][:version]}/"
-default['bigtop']['repo_base']      = "#{node.bigtop.archive}repos/"
+default['bigtop']['repo_base']      = "#{node[:bigtop][:archive]}repos/"
 
 # repos are platform dependent
 case node['platform_family']

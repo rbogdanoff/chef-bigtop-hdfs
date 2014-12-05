@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'bigtop-base::default' do
+describe 'bigtop-hdfs::base' do
 
   describe 'java' do
     describe 'is installed' do

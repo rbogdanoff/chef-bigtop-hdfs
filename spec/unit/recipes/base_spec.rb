@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'bigtop-base::default'  do
+describe 'bigtop-hdfs::base'  do
   let(:chef_run) do
     ChefSpec::SoloRunner.new(platform: 'centos', version: '6.4')
                     .converge(described_recipe)

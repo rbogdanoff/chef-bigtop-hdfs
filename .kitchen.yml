@@ -9,6 +9,6 @@ platforms:
   - name: centos-6.4
 
 suites:
-  - name: default
+  - name: base
     run_list:
-      - recipe[bigtop-hdfs::default]
+      - recipe[bigtop-hdfs::base]

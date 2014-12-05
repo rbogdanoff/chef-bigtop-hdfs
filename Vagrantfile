@@ -11,21 +11,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = 'chef-bigtop-base-berkshelf'
+  config.vm.hostname = 'chef-bigtop-hdfs'
 
-  # Set the version of chef to install using the vagrant-omnibus plugin
-  # NOTE: You will need to install the vagrant-omnibus plugin:
-  #
-  #   $ vagrant plugin install vagrant-omnibus
-  #
-  if Vagrant.has_plugin?
-    config.omnibus.chef_version = 'latest'
-  end
+  # make sure we have chef installed
+  config.omnibus.chef_version = :latest
 
   # Every Vagrant virtual environment requires a box to build off of.
   # If this value is a shorthand to a box in Vagrant Cloud then
   # config.vm.box_url doesn't need to be specified.
-  config.vm.box = 'chef/ubuntu-14.04'
+  config.vm.box = "opscode-centos-6.4"
+  config.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box"
 
 
   # Assign this VM to a host-only network IP, allowing you to access it
@@ -76,15 +71,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      mysql: {
-        server_root_password: 'rootpass',
-        server_debian_password: 'debpass',
-        server_repl_password: 'replpass'
-      }
     }
 
     chef.run_list = [
-      'recipe[chef-bigtop-base::default]'
+      'recipe[bigtop-hdfs::base]'
     ]
   end
 end

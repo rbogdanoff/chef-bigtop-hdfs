@@ -1,8 +1,24 @@
 # chef-bigtop-hdfs-cookbook
 
-### currently under development.
+### currently under development - not functional yet
 
-HDFS cookbook for Apache Bigtop
+### HDFS cookbook for Apache Bigtop - installs hadoop hdfs using version 0.8.0 of the Apache Bigtop distribution of hadoop (http://bigtop.apache.org/)
+
+### this cookbook is being developed using the ChefDK
+### what you need
+
+* install VirtualBox https://www.virtualbox.org/
+
+* install Vagrant https://www.vagrantup.com/
+
+* install the vagrant berkshelf plugin
+  `vagrant plugin install vagrant-berkshelf`
+
+* install chefdk https://downloads.getchef.com/chef-dk/
+
+* make sure the chefdk is in begining $PATH (edit your .bash_profile)
+  `export PATH=/opt/chefdk/bin:/opt/chefdk/embedded/bin:$PATH`
+
 
 ## Supported Platforms
 
