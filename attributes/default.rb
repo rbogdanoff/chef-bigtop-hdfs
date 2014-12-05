@@ -17,19 +17,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-default['bigtop']['version']        = '0.8.0'
+default[:bigtop][:version]        = '0.8.0'
 
 # bigtop archive
-default['bigtop']['archive_base']   = 'http://archive.apache.org/dist/bigtop/'
-default['bigtop']['archive']        = "#{node[:bigtop][:archive_base]}bigtop-#{node[:bigtop][:version]}/"
-default['bigtop']['repo_base']      = "#{node[:bigtop][:archive]}repos/"
+default[:bigtop][:archive_base]   = 'http://archive.apache.org/dist/bigtop/'
+default[:bigtop][:archive]        = "#{node[:bigtop][:archive_base]}bigtop-#{node[:bigtop][:version]}/"
+default[:bigtop][:repo_base]      = "#{node[:bigtop][:archive]}repos/"
 
 # repos are platform dependent
-case node['platform_family']
+case node[:platform_family]
 when 'rhel'
-  default['bigtop']['repo_target'] = '/etc/yum.repos.d/bigtop.repo'
+  default[:bigtop][:repo_target] = '/etc/yum.repos.d/bigtop.repo'
   case node['platform']
   when 'centos'
-    default['bigtop']['repo'] = "#{node[:bigtop][:repo_base]}centos6/bigtop.repo"
+    default[:bigtop][:repo] = "#{node[:bigtop][:repo_base]}centos6/bigtop.repo"
   end
 end

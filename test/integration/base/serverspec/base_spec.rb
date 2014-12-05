@@ -16,4 +16,14 @@ describe 'bigtop-hdfs::base' do
     end
   end
 
+  describe 'bigtop repository' do
+    describe 'downloaded' do
+      describe file('/etc/yum.repos.d/bigtop.repo') do
+        it { should be_file }
+        it { should be_mode 644 }
+        it { should be_owned_by 'root' }
+        it { should be_grouped_into 'root' }
+      end
+    end
+  end
 end
