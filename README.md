@@ -1,5 +1,7 @@
 # chef-bigtop-hdfs-cookbook
 
+[![Built on Travis](https://secure.travis-ci.org/rbogdanoff/chef-bigtop-hdfs.png)](http://travis-ci.org/rbogdanoff/chef-bigtop-hdfs)
+
 ### currently under development - not functional yet
 
 ### HDFS cookbook for Apache Bigtop - installs hadoop hdfs using version 0.8.0 of the Apache Bigtop distribution of hadoop (http://bigtop.apache.org/)
