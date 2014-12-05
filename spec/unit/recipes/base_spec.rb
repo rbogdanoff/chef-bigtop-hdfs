@@ -1,4 +1,4 @@
-require 'spec_helper'
+# require 'spec_helper'
 
 # describe 'bigtop-hdfs::base'  do
 #   let(:chef_run) do
