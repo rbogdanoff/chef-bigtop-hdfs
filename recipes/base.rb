@@ -13,6 +13,9 @@
 # limitations under the License.
 #
 
+# bigtop-hdfs:base - installs common 'resources' needed by hdfs and
+# all other bigtop cookbook
+
 # install java
 node.set[:java][:install_flavor] = 'oracle'
 node.set[:java][:oracle][:accept_oracle_download_terms] = true
