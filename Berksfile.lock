@@ -1,0 +1,10 @@
+DEPENDENCIES
+  bigtop-hdfs
+    path: .
+    metadata: true
+  java (~> 1.29.0)
+
+GRAPH
+  bigtop-hdfs (0.8.0)
+    java (~> 1.29.0)
+  java (1.29.0)
