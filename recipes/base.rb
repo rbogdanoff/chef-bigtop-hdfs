@@ -17,14 +17,14 @@
 # all other bigtop cookbook
 
 # install java
-node.set[:java][:install_flavor] = 'oracle'
-node.set[:java][:oracle][:accept_oracle_download_terms] = true
+node.set['java']['install_flavor'] = 'oracle'
+node.set['java']['oracle']['accept_oracle_download_terms'] = true
 include_recipe 'java::default'
 
 # get the bigtop distibution repository
 remote_file 'bigtop repository' do
-  source node[:bigtop][:repo]
-  path node[:bigtop][:repo_target]
+  source node['bigtop']['repo']
+  path node['bigtop']['repo_target']
   backup false
   owner  'root'
   group  'root'

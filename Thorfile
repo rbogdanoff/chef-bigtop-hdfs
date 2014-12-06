@@ -40,7 +40,7 @@ class Cookbook < Thor
   desc 'foodcritic', 'run foodcritic (Amuse-bouche)'
   def foodcritic
     puts "running foodcritic (Amuse-bouche)"
-    f = Mixlib::ShellOut.new('foodcritic -f any --tags ~FC001 --tags ~FC019 --tags ~FC047 .')
+    f = Mixlib::ShellOut.new('foodcritic -f any --tags ~FC019 --tags ~FC047 .')
     f.run_command
     puts f.stdout
     raise "Foodcritic failed" if f.exitstatus > 0
