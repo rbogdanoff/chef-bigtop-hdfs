@@ -26,6 +26,19 @@
 
 Centos
 
+## Recipes
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><tt>bigtop-hdfs:base</tt></td>
+    <td>installs common 'resources' needed by all recipes</td>
+  </tr>
+</table>
+
 ## Attributes
 
 <table>
@@ -36,7 +49,7 @@ Centos
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['chef-bigtop-base']['bacon']</tt></td>
+    <td><tt>['bigtop-hdfs']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -45,16 +58,16 @@ Centos
 
 ## Usage
 
-### chef-bigtop-hdfs::default
+TODO
 
-Include `bigtop-hdfs` in your node's `run_list`:
+##Testing
+You can run the tests in this cookbook using thor:
 
-```json
-{
-  "run_list": [
-    "recipe[bigtop-hdfs::default]"
-  ]
-}
+```text
+thor list               # start here to see what is available
+thor cookbook:test      # runs lint and unit tests
+thor cookbook:int_test  # runs integration tests (i.e. kitchen)
+thor cookbook:test_all  # runs all tests
 ```
 
 ## License and Authors
